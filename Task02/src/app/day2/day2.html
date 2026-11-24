@@ -1,0 +1,14 @@
+<h1>hello</h1>
+<p>day2 works!</p>
+<p> {{name}}</p>
+<img [src]="imgsrc" alt="">
+<p> {{category}}</p>
+<input type="text" [(ngModel)]="category" placeholder="Enter category">
+
+
+<button [disabled]="isDisabled" (click)="onButtonClick()">Click me</button>
+<p></p>
+<button (click)="increase()">increase</button>
+<button (click)="decrease()">decrease</button>
+
+<p>Number: {{number}}</p>

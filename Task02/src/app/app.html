@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+
+<app-header></app-header>
+
+<header>
+  <h1>{{ storeName }}</h1>
+  <p>{{ storeDescription }}</p>
+  <p>{{ storeAddress }} | Products in catalog: {{ totalProducts }} | Currency: {{ currency }}</p>
+  <h2>{{ storeStatus }}</h2>
+</header>
+
+<section>
+  <h2>Featured Product</h2>
+  <h3>{{ featuredProduct.name }}</h3>
+  <p>{{ featuredProduct.description }}</p>
+  <p>
+    Original price: ${{ featuredProduct.price }} | Final price: ${{ finalPrice }} |
+    {{ discountPercentage }}% Discount
+  </p>
+</section>
+
+<app-productdetails></app-productdetails>
+
+<section>
+  <h2>Our Products</h2>
+  <ul>
+    @for (name of productNames; track name; let i = $index) {
+      <li>{{ name }} - ${{ productPrices[i] }}</li>
+    }
+  </ul>
+</section>
+
+<app-productlist></app-productlist>
+
+<section>
+  <h2>Store Summary</h2>
+  <ul>
+    <li>Total Products: {{ summaryTotalProducts }}</li>
+    <li>Highest Price: ${{ highestPrice }}</li>
+    <li>Lowest Price: ${{ lowestPrice }}</li>
+    <li>Total Products Value: ${{ totalValue }}</li>
+  </ul>
+</section>
+
+<app-footer></app-footer>
+
+<router-outlet />
