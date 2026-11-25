@@ -1,0 +1,10 @@
+body { margin: 0; font-family: Arial, sans-serif; background: #f4f5f7; color: #222; }
+header, footer { background: #e2604a; color: white; text-align: center; padding: 16px; }
+main { max-width: 1000px; margin: auto; padding: 16px; }
+.products { display: flex; flex-wrap: wrap; gap: 12px; }
+.card { background: white; border-radius: 8px; padding: 12px; width: 170px; text-align: center; }
+.card img { width: 80px; height: 80px; }
+.row { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 24px; }
+.row section { flex: 1; min-width: 250px; background: white; border-radius: 8px; padding: 16px; }
+button { background: #e2604a; color: white; border: 0; padding: 8px 12px; border-radius: 4px; cursor: pointer; }
+button:disabled { background: #aaa; cursor: not-allowed; }
